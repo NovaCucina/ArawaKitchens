@@ -30,6 +30,10 @@
     a, button { outline-offset: 3px; }
     a:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;border:1px solid #1e293b;background:#006699;color:#fff;font-weight:600;text-decoration:none}
+    .btn:hover,.btn:focus{background:#015c85}
+    .wa-btn{background:#25D366;border-color:#1c9e4e;color:#0b2816}
+    .wa-btn:hover,.wa-btn:focus{background:#1cc75b}
   </style>
 </head>
 <body>
@@ -37,6 +41,7 @@
   <header>
     <h1>NovaCucina</h1>
     <p>Premium European kitchens — launching in Guyana</p>
+    <p style="margin-top:14px"><a id="waTop" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
   </header>
   <nav aria-label="Primary navigation">
     <a href="#about">About</a>
@@ -60,7 +65,6 @@
     </section>
     <section id="compact">
       <h2>Compact Kitchen Examples</h2>
-      <p>The two compact kitchens below showcase our style. To display the images on your live site, place <code>kitchen1.jpg</code> and <code>kitchen2.jpg</code> in the same folder as this page.</p>
       <div class="grid">
         <figure class="card">
           <img src="kitchen1.jpg" alt="Straight kitchen with tall fridge‑freezer, wall cabinets, chimney hood, sink and integrated dishwasher" loading="lazy" decoding="async">
@@ -74,16 +78,24 @@
     </section>
     <section id="contact">
       <h2>Contact</h2>
-      <p><strong>Name:</strong> [Your Name]</p>
       <p><strong>Company:</strong> NovaCucina</p>
-      <p><strong>Email:</strong> <a href="mailto:info@novacucina.com">info@novacucina.com</a></p>
-      <p><strong>Phone / WhatsApp:</strong> +592 [your number]</p>
+      <p><strong>Phone / WhatsApp:</strong> +31625106050</p>
       <p><strong>Location:</strong> Georgetown, Guyana</p>
+      <p><a id="waLink" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
     </section>
   </main>
   <footer>
     <p>&copy; <span id="year"></span> NovaCucina. All rights reserved.</p>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const WA_PHONE = '31625106050';
+    const WA_TEXT  = encodeURIComponent("Hello NovaCucina! I'm interested in your kitchens.");
+    const WA_URL   = `https://wa.me/${WA_PHONE}?text=${WA_TEXT}`;
+    for (const id of ['waLink','waTop']) {
+      const el = document.getElementById(id);
+      if (el) el.href = WA_URL;
+    }
+  </script>
 </body>
 </html>
