@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NovaCucina | European Kitchens in Guyana</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>ArawaKitchens | European Kitchens in Guyana</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,101 +11,93 @@
     header { background-color: #003366; color: #ffffff; padding: 60px 20px; text-align: center; }
     header h1 { font-size: 3em; margin-bottom: 0.3em; }
     header p { font-size: 1.2em; color: #cc9900; }
-    nav { background-color: #006699; display: flex; justify-content: center; padding: 10px 0; gap: 16px; flex-wrap: wrap; }
-    nav a { color: #ffffff; text-decoration: none; font-weight: 600; }
-    nav a:hover, nav a:focus { text-decoration: underline; }
-    main section { max-width: 1100px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    nav { background-color: #006699; display: flex; justify-content: center; padding: 10px 0; }
+    nav a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    section { max-width: 1000px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
     h2 { margin-bottom: 20px; color: #003366; }
     ul { padding-left: 20px; margin-top: 10px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; }
-    figure { margin: 0; }
-    figure img { width: 100%; height: auto; border-radius: 8px; display: block; }
-    figure figcaption { margin-top: 8px; color: #003366; font-weight: 600; text-align: center; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+    .gallery img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     footer { background-color: #003366; color: #ffffff; text-align: center; padding: 20px; margin-top: 40px; }
     footer p { font-size: 0.9em; }
-    /* Accessibility */
-    .skip-link{position:absolute;left:-9999px;top:auto}
-    .skip-link:focus{left:12px;top:12px;background:#ffffff;color:#000;padding:8px 12px;border-radius:6px;box-shadow:0 0 0 3px #ffbf47}
-    a, button { outline-offset: 3px; }
-    a:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; }
-    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
-      /* WhatsApp button styles */
+
+    /* WhatsApp button styles */
     .btn{display:inline-block;padding:12px 16px;border-radius:10px;border:1px solid #1e293b;background:#006699;color:#fff;font-weight:600;text-decoration:none}
     .btn:hover,.btn:focus{background:#015c85}
     .wa-btn{background:#25D366;border-color:#1c9e4e;color:#0b2816}
     .wa-btn:hover,.wa-btn:focus{background:#1cc75b}
-    .wa-fab{position:fixed;right:18px;bottom:18px;z-index:50}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
   <header>
-    <p style="margin-top:14px"><a id="waTop" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
-    <h1>NovaCucina</h1>
-    <p>Premium European kitchens — launching in Guyana</p>
+    <h1>ArawaKitchens</h1>
+    <p>Premium European Kitchens – Launching Soon in Guyana</p>
+    <p style="margin-top:14px">
+      <a id="waTop" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a>
+    </p>
   </header>
+
   <nav aria-label="Primary navigation">
     <a href="#about">About</a>
+    <a href="#launch">Coming Soon</a>
     <a href="#services">Services</a>
-    <a href="#compact">Compact Kitchens</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <main id="main">
-    <section id="about">
-      <h2>About NovaCucina</h2>
-      <p>NovaCucina brings high‑quality European kitchens to the Guyanese market. We focus on clean design, durable materials, and customer‑centric customization. We work with leading European brands recognized for quality and innovation.</p>
-    </section>
+  <section id="about">
+    <h2>About ArawaKitchens</h2>
+    <p>ArawaKitchens is dedicated to bringing premium European kitchen solutions to the Guyanese market. Our focus is on clean design, durable materials, and customer-centered customization. We proudly work with top European kitchen brands known for quality and innovation.</p>
+  </section>
 
-    <section id="services">
-      <h2>What We Offer</h2>
-      <ul>
-        <li>Premium kitchens for private homes</li>
-        <li>Turn‑key kitchen packages for developers</li>
-        <li>Custom solutions for commercial and corporate spaces</li>
-        <li>Consultancy and kitchen planning for building professionals</li>
-      </ul>
-    </section>
+  <section id="launch">
+    <h2>We're Launching Soon!</h2>
+    <p>We are excited to announce that Arawa Kitchens will open its first kitchen showroom in Georgetown, Guyana. We are preparing a curated kitchen collection tailored to the needs and style of Guyanese homeowners and developers, showcasing only top-tier brands from Europe.</p>
+  </section>
 
-    <section id="compact">
-      <h2>Compact Kitchen Examples</h2>
-      <p>The two compact kitchens below showcase our style. To display the images on your live site, place <code>kitchen1.jpg</code> and <code>kitchen2.jpg</code> in the same folder as this page.</p>
-      <div class="grid">
-        <figure class="card">
-          <img src="kitchen1.jpg" alt="Straight kitchen with tall fridge‑freezer, wall cabinets, chimney hood, sink and integrated dishwasher" loading="lazy" decoding="async">
-          <figcaption>Straight Kitchen — Gloss Graphite</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="kitchen2.jpg" alt="L‑shaped kitchen in wood finish with wall cabinets, range hood, sink and freestanding cooker" loading="lazy" decoding="async">
-          <figcaption>L‑Shaped Kitchen — Wood Finish</figcaption>
-        </figure>
-      </div>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>In addition to supplying premium kitchens for private homes, ArawaKitchens also provides solutions for:</p>
+    <ul>
+      <li>Residential construction and housing projects</li>
+      <li>Turnkey kitchen packages for developers</li>
+      <li>Customized kitchens for commercial and corporate environments</li>
+      <li>Consultancy and kitchen planning for building professionals</li>
+    </ul>
+    <p>We support architects, contractors, and businesses in delivering beautiful, functional kitchen spaces for every type of project.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Company:</strong> NovaCucina</p>
-      <p><strong>Phone / WhatsApp:</strong> +31625106050</p>
-      <p><strong>Location:</strong>Comming soon in Georgetown, Guyana</p>
-      <p>
-        <a id="waLink" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a>
-      </p>
-    </section>
-  </main>
+  <section id="gallery">
+    <h2>Kitchen Gallery</h2>
+    <p>Here’s a preview of the types of kitchens we plan to bring to Guyana:</p>
+    <div class="gallery">
+      <img src="kitchen1.jpg" alt="Straight kitchen with wall units, chimney hood and tall fridge-freezer">
+      <img src="kitchen2.jpg" alt="L-shaped kitchen in warm wood finish with range hood and sink">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Company:</strong> ArawaKitchens</p>
+    <p><strong>Phone / WhatsApp:</strong> +31625106050</p>
+    <p><strong>Location:</strong> Georgetown, Guyana</p>
+    <p><a id="waLink" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
+  </section>
 
   <footer>
-    <p>&copy; <span id="year"></span> NovaCucina. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Arawa Kitchens. All rights reserved.</p>
   </footer>
 
   <script>
+    // Current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
-      document.getElementById('year').textContent = new Date().getFullYear();
+
     // WhatsApp click-to-chat
-    const WA_PHONE = '31625106050'; // <-- replace with your real number (no + or spaces)
-    const WA_TEXT  = encodeURIComponent("Hello NovaCucina! I'm interested in your kitchens.");
+    const WA_PHONE = '31625106050'; // no +, no spaces
+    const WA_TEXT  = encodeURIComponent("Hello Arawa Kitchens! I'm interested in your kitchens.");
     const WA_URL   = `https://wa.me/${WA_PHONE}?text=${WA_TEXT}`;
-    for (const id of ['waLink','waTop']) {
+    for (const id of ['waTop','waLink']) {
       const el = document.getElementById(id);
       if (el) el.href = WA_URL;
     }
