@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NovaCucina | European Kitchens in Guyana</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; background-color: #fdfdfd; color: #1a1a1a; line-height: 1.6; }
+    header { background-color: #003366; color: #ffffff; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 3em; margin-bottom: 0.3em; }
+    header p { font-size: 1.2em; color: #cc9900; }
+    nav { background-color: #006699; display: flex; justify-content: center; padding: 10px 0; gap: 16px; flex-wrap: wrap; }
+    nav a { color: #ffffff; text-decoration: none; font-weight: 600; }
+    nav a:hover, nav a:focus { text-decoration: underline; }
+    main section { max-width: 1100px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h2 { margin-bottom: 20px; color: #003366; }
+    ul { padding-left: 20px; margin-top: 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; }
+    figure { margin: 0; }
+    figure img { width: 100%; height: auto; border-radius: 8px; display: block; }
+    figure figcaption { margin-top: 8px; color: #003366; font-weight: 600; text-align: center; }
+    footer { background-color: #003366; color: #ffffff; text-align: center; padding: 20px; margin-top: 40px; }
+    footer p { font-size: 0.9em; }
+    .skip-link{position:absolute;left:-9999px;top:auto}
+    .skip-link:focus{left:12px;top:12px;background:#ffffff;color:#000;padding:8px 12px;border-radius:6px;box-shadow:0 0 0 3px #ffbf47}
+    a, button { outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <h1>NovaCucina</h1>
+    <p>Premium European kitchens — launching in Guyana</p>
+  </header>
+  <nav aria-label="Primary navigation">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#compact">Compact Kitchens</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main id="main">
+    <section id="about">
+      <h2>About NovaCucina</h2>
+      <p>NovaCucina brings high‑quality European kitchens to the Guyanese market. We focus on clean design, durable materials, and customer‑centric customization. We work with leading European brands recognized for quality and innovation.</p>
+    </section>
+    <section id="services">
+      <h2>What We Offer</h2>
+      <ul>
+        <li>Premium kitchens for private homes</li>
+        <li>Turn‑key kitchen packages for developers</li>
+        <li>Custom solutions for commercial and corporate spaces</li>
+        <li>Consultancy and kitchen planning for building professionals</li>
+      </ul>
+    </section>
+    <section id="compact">
+      <h2>Compact Kitchen Examples</h2>
+      <p>The two compact kitchens below showcase our style. To display the images on your live site, place <code>kitchen1.jpg</code> and <code>kitchen2.jpg</code> in the same folder as this page.</p>
+      <div class="grid">
+        <figure class="card">
+          <img src="kitchen1.jpg" alt="Straight kitchen with tall fridge‑freezer, wall cabinets, chimney hood, sink and integrated dishwasher" loading="lazy" decoding="async">
+          <figcaption>Straight Kitchen — Gloss Graphite</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="kitchen2.jpg" alt="L‑shaped kitchen in wood finish with wall cabinets, range hood, sink and freestanding cooker" loading="lazy" decoding="async">
+          <figcaption>L‑Shaped Kitchen — Wood Finish</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Name:</strong> [Your Name]</p>
+      <p><strong>Company:</strong> NovaCucina</p>
+      <p><strong>Email:</strong> <a href="mailto:info@novacucina.com">info@novacucina.com</a></p>
+      <p><strong>Phone / WhatsApp:</strong> +592 [your number]</p>
+      <p><strong>Location:</strong> Georgetown, Guyana</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> NovaCucina. All rights reserved.</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
