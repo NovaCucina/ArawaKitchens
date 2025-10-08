@@ -11,18 +11,25 @@
     header { background-color: #003366; color: #ffffff; padding: 60px 20px; text-align: center; }
     header h1 { font-size: 3em; margin-bottom: 0.3em; }
     header p { font-size: 1.2em; color: #cc9900; }
-    nav { background-color: #006699; display: flex; justify-content: center; padding: 10px 0; }
-    nav a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: 600; }
-    nav a:hover { text-decoration: underline; }
-    section { max-width: 1000px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    nav { background-color: #006699; display: flex; justify-content: center; padding: 10px 0; gap: 16px; flex-wrap: wrap; }
+    nav a { color: #ffffff; text-decoration: none; font-weight: 600; }
+    nav a:hover, nav a:focus { text-decoration: underline; }
+    main section { max-width: 1100px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
     h2 { margin-bottom: 20px; color: #003366; }
     ul { padding-left: 20px; margin-top: 10px; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-    .gallery img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+    figure { margin: 0; }
+    figure img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: block; }
+    figure figcaption { margin-top: 8px; color: #003366; font-weight: 600; text-align: center; font-size: 0.95rem; }
     footer { background-color: #003366; color: #ffffff; text-align: center; padding: 20px; margin-top: 40px; }
     footer p { font-size: 0.9em; }
-
-    /* WhatsApp button styles */
+    /* Accessibility helpers */
+    .skip-link{position:absolute;left:-9999px;top:auto}
+    .skip-link:focus{left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;border-radius:6px;box-shadow:0 0 0 3px #ffbf47}
+    a, button { outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    /* WhatsApp buttons */
     .btn{display:inline-block;padding:12px 16px;border-radius:10px;border:1px solid #1e293b;background:#006699;color:#fff;font-weight:600;text-decoration:none}
     .btn:hover,.btn:focus{background:#015c85}
     .wa-btn{background:#25D366;border-color:#1c9e4e;color:#0b2816}
@@ -30,12 +37,12 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
     <h1>ArawaKitchens</h1>
     <p>Premium European Kitchens – Launching Soon in Guyana</p>
-    <p style="margin-top:14px">
-      <a id="waTop" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a>
-    </p>
+    <p style="margin-top:14px"><a id="waTop" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
   </header>
 
   <nav aria-label="Primary navigation">
@@ -46,59 +53,96 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <h2>About ArawaKitchens</h2>
-    <p>ArawaKitchens is dedicated to bringing premium European kitchen solutions to the Guyanese market. Our focus is on clean design, durable materials, and customer-centered customization. We proudly work with top European kitchen brands known for quality and innovation.</p>
-  </section>
+  <main id="main">
+    <section id="about">
+      <h2>About ArawaKitchens</h2>
+      <p>ArawaKitchens is dedicated to bringing premium European kitchen solutions to the Guyanese market. Our focus is on clean design, durable materials, and customer-centered customization. We proudly work with top European brands known for quality and innovation.</p>
+    </section>
 
-  <section id="launch">
-    <h2>We're Launching Soon!</h2>
-    <p>We are excited to announce that Arawa Kitchens will open its first kitchen showroom in Georgetown, Guyana. We are preparing a curated kitchen collection tailored to the needs and style of Guyanese homeowners and developers, showcasing only top-tier brands from Europe.</p>
-  </section>
+    <section id="launch">
+      <h2>We're Launching Soon!</h2>
+      <p>We’re preparing a curated collection tailored to the needs and style of Guyanese homeowners and developers, showcasing top-tier European brands.</p>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>In addition to supplying premium kitchens for private homes, ArawaKitchens also provides solutions for:</p>
-    <ul>
-      <li>Residential construction and housing projects</li>
-      <li>Turnkey kitchen packages for developers</li>
-      <li>Customized kitchens for commercial and corporate environments</li>
-      <li>Consultancy and kitchen planning for building professionals</li>
-    </ul>
-    <p>We support architects, contractors, and businesses in delivering beautiful, functional kitchen spaces for every type of project.</p>
-  </section>
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>In addition to supplying premium kitchens for private homes, ArawaKitchens also provides solutions for:</p>
+      <ul>
+        <li>Residential construction and housing projects</li>
+        <li>Turnkey kitchen packages for developers</li>
+        <li>Customized kitchens for commercial and corporate environments</li>
+        <li>Consultancy and kitchen planning for building professionals</li>
+      </ul>
+    </section>
 
-  <section id="gallery">
-    <h2>Kitchen Gallery</h2>
-    <p>Here’s a preview of the types of kitchens we plan to bring to Guyana:</p>
-    <div class="gallery">
-      <img src="kitchen1.jpg" alt="Straight kitchen with wall units, chimney hood and tall fridge-freezer">
-      <img src="kitchen2.jpg" alt="L-shaped kitchen in warm wood finish with range hood and sink">
-        </div>
-</section>
+    <section id="gallery">
+      <h2>Kitchen Gallery</h2>
+      <p>Here’s a preview of kitchens we supply in Guyana:</p>
 
-    </div>
-  </section>
+      <div class="gallery">
+        <figure>
+          <img src="hoek-keuken-wit.jpg" alt="L-shaped white kitchen with tall cabinet and dark backsplash" loading="lazy" decoding="async">
+          <figcaption>L-shaped White Kitchen</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-authentiek.jpg" alt="Authentic cream kitchen with framed doors and tiled backsplash" loading="lazy" decoding="async">
+          <figcaption>Authentic Cream Kitchen</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-bruin-oven-combi-2.jpg" alt="Close-up of stacked Miele oven and combi in wood-tone kitchen" loading="lazy" decoding="async">
+          <figcaption>Wood Tone — Oven &amp; Combi (close-up)</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-bruin-oven-combi.jpg" alt="Wood-tone kitchen with gas hob, hood and stacked ovens" loading="lazy" decoding="async">
+          <figcaption>Wood Tone — Full View</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-klein-2.jpg" alt="Compact white line kitchen with black top and two sinks" loading="lazy" decoding="async">
+          <figcaption>Compact Line Kitchen</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-klein-3-1.jpg" alt="Compact cream kitchen with farmhouse sink and shelves" loading="lazy" decoding="async">
+          <figcaption>Compact Cream Kitchen (shelves)</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-klein-3.jpg" alt="Compact cream kitchen with drawers open" loading="lazy" decoding="async">
+          <figcaption>Compact Cream Kitchen (open drawers)</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-klein-4.jpg" alt="Modern white kitchen with built-in microwave oven column" loading="lazy" decoding="async">
+          <figcaption>Modern White Kitchen</figcaption>
+        </figure>
+        <figure>
+          <img src="keuken-klein.jpg" alt="Light wood kitchen with wall cabinets and electric hob" loading="lazy" decoding="async">
+          <figcaption>Light Wood Kitchen</figcaption>
+        </figure>
+        <figure>
+          <img src="kook-eiland-wit.jpg" alt="White kitchen with island hob and stainless island hood" loading="lazy" decoding="async">
+          <figcaption>Kitchen with Island Hob</figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Company:</strong> ArawaKitchens</p>
-    <p><strong>Phone / WhatsApp:</strong> +31625106050</p>
-    <p><strong>Location:</strong> Georgetown, Guyana</p>
-    <p><a id="waLink" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Company:</strong> ArawaKitchens</p>
+      <p><strong>Phone / WhatsApp:</strong> +31625106050</p>
+      <p><strong>Location:</strong> Georgetown, Guyana</p>
+      <p><a id="waLink" class="btn wa-btn" href="#">💬 Chat with us on WhatsApp</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Arawa Kitchens. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> ArawaKitchens. All rights reserved.</p>
   </footer>
 
   <script>
-    // Current year in footer
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // WhatsApp click-to-chat
-    const WA_PHONE = '31625106050'; // no +, no spaces
-    const WA_TEXT  = encodeURIComponent("Hello Arawa Kitchens! I'm interested in your kitchens.");
+    // WhatsApp click-to-chat (no +, no spaces)
+    const WA_PHONE = '31625106050';
+    const WA_TEXT  = encodeURIComponent("Hello ArawaKitchens! I'm interested in your kitchens.");
     const WA_URL   = `https://wa.me/${WA_PHONE}?text=${WA_TEXT}`;
     for (const id of ['waTop','waLink']) {
       const el = document.getElementById(id);
