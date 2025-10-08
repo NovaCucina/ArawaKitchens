@@ -37,14 +37,12 @@
     footer { background-color: #003366; color: #ffffff; text-align: center; padding: 20px; margin-top: 40px; }
     footer p { font-size: 0.9em; }
 
-    /* Accessibility helpers */
     .skip-link{position:absolute;left:-9999px;top:auto}
     .skip-link:focus{left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;border-radius:6px;box-shadow:0 0 0 3px #ffbf47}
     a, button { outline-offset: 3px; }
     a:focus-visible, button:focus-visible { outline: 3px solid #ffbf47; }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
-    /* WhatsApp buttons */
     .btn{display:inline-block;padding:12px 16px;border-radius:10px;border:1px solid #1e293b;background:#006699;color:#fff;font-weight:600;text-decoration:none}
     .btn:hover,.btn:focus{background:#015c85}
     .wa-btn{background:#25D366;border-color:#1c9e4e;color:#0b2816}
@@ -95,6 +93,7 @@
       <p>Here’s a preview of kitchens we supply in Guyana:</p>
 
       <div class="gallery">
+        <!-- existing 10 -->
         <figure><img src="Hoek%20keuken%20wit.JPG" alt="L-shaped white kitchen with tall cabinet and dark backsplash"><figcaption>L-shaped White Kitchen</figcaption></figure>
         <figure><img src="Keuken%20autentiek.JPG" alt="Authentic cream kitchen with framed doors and tiled backsplash"><figcaption>Authentic Cream Kitchen</figcaption></figure>
         <figure><img src="Keuken%20bruin%20oven%20en%20combie%202.JPG" alt="Close-up of stacked Miele oven and combi in wood-tone kitchen"><figcaption>Wood Tone — Oven &amp; Combi (close-up)</figcaption></figure>
@@ -105,10 +104,32 @@
         <figure><img src="Keuken%20klein%204.JPG" alt="Modern white kitchen with built-in microwave oven column"><figcaption>Modern White Kitchen</figcaption></figure>
         <figure><img src="Keuken%20klein.JPG" alt="Light wood kitchen with wall cabinets and electric hob"><figcaption>Light Wood Kitchen</figcaption></figure>
         <figure><img src="Kook%20eiland%20wit.JPG" alt="White kitchen with island hob and stainless island hood"><figcaption>Kitchen with Island Hob</figcaption></figure>
+
+        <!-- NEW 5 images -->
+        <figure>
+          <img src="Complete%20keukeneenheid%20Wit%20antraciet%20300%20cm%20met%20hoge%20kast%20WB%20Marmer%20R-Line.JPG"
+               alt="Complete white and anthracite kitchen set with tall unit, marble-look worktop, ovens and hood">
+          <figcaption>Complete White/Anthracite Kitchen Set</figcaption>
+        </figure>
+        <figure>
+          <img src="Keuken%20rond%202.JPG" alt="Rounded kitchen island with wooden bar top and stools">
+          <figcaption>Rounded Island with Bar Top</figcaption>
+        </figure>
+        <figure>
+          <img src="Keuken%20rond.JPG" alt="Rounded kitchen island with stainless hob and drawers">
+          <figcaption>Rounded Island — Stainless Hob</figcaption>
+        </figure>
+        <figure>
+          <img src="Kook%20eiland%20bruin%201.JPG" alt="Brown granite-topped island with induction and drawers close-up">
+          <figcaption>Brown Island — Close-up</figcaption>
+        </figure>
+        <figure>
+          <img src="Kook%20eiland%20bruin.JPG" alt="Kitchen with brown granite island and black cabinetry">
+          <figcaption>Kitchen with Brown Granite Island</figcaption>
+        </figure>
       </div>
 
       <p class="price-note">All kitchen prices are indicative and subject to final confirmation based on design and specifications.</p>
-                                                    <p contact us for prices </p>
     </section>
 
     <section id="contact">
@@ -125,7 +146,10 @@
   </footer>
 
   <script>
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // WhatsApp click-to-chat (no +, no spaces)
     const WA_PHONE = '31625106050';
     const WA_TEXT  = encodeURIComponent("Hello ArawaKitchens! I'm interested in your kitchens.");
     const WA_URL   = `https://wa.me/${WA_PHONE}?text=${WA_TEXT}`;
