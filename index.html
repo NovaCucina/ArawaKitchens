@@ -45,10 +45,14 @@
 
     .price-note {
       font-size: 0.9em;
-      color: #666666;
+      color: #444;
       text-align: center;
-      margin-top: 25px;
+      margin-top: 30px;
       font-style: italic;
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 15px;
+      border: 1px solid #e5e7eb;
     }
 
     footer { background-color: #003366; color: #ffffff; text-align: center; padding: 20px; margin-top: 40px; }
@@ -78,7 +82,7 @@
   <main>
     <section id="about">
       <h2>About ArawaKitchens</h2>
-      <p>ArawaKitchens brings premium European kitchen solutions to Guyana, focusing on durable materials, sleek design, and tailored customization.</p>
+      <p>ArawaKitchens brings premium European kitchen solutions to Guyana, focusing on durable materials, sleek design, and tailored customization. We partner with leading European manufacturers known for quality and innovation.</p>
     </section>
 
     <section id="launch">
@@ -88,7 +92,7 @@
 
     <section id="gallery">
       <h2>Kitchen Gallery</h2>
-      <p>Our featured kitchens:</p>
+      <p>Our featured kitchen models:</p>
 
       <!-- FEATURED 6 -->
       <div class="gallery">
@@ -102,7 +106,7 @@
 
       <!-- REST IN DROPDOWN -->
       <details class="more">
-        <summary>See 14 more kitchens</summary>
+        <summary>See more kitchen models</summary>
         <div class="gallery">
           <figure><img src="Hoek%20keuken%20wit.JPG" alt="L-shaped white kitchen with tall cabinet and dark backsplash"><figcaption>L-shaped White Kitchen</figcaption></figure>
           <figure><img src="Keuken%20autentiek.JPG" alt="Authentic cream kitchen with framed doors and tiled backsplash"><figcaption>Authentic Cream Kitchen</figcaption></figure>
@@ -121,7 +125,11 @@
         </div>
       </details>
 
-      <p class="price-note">All kitchen prices are indicative and subject to final confirmation based on design and specifications.</p>
+      <p class="price-note">
+        All kitchen prices are indicative and subject to final confirmation based on design and specifications.<br><br>
+        <strong>For pricing inquiries or design variations, please contact us via WhatsApp.</strong><br>
+        Custom configurations and alternative finishes are available upon request.
+      </p>
     </section>
 
     <section id="contact">
@@ -140,7 +148,7 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const WA_PHONE = '5926100335';
-    const WA_TEXT  = encodeURIComponent("Hello ArawaKitchens! I'm interested in your kitchens.");
+    const WA_TEXT  = encodeURIComponent("Hello ArawaKitchens! I'm interested in your kitchens and pricing details.");
     const WA_URL   = `https://wa.me/${WA_PHONE}?text=${WA_TEXT}`;
     for (const id of ['waTop','waLink']) {
       const el = document.getElementById(id);
